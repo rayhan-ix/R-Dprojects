@@ -1,14 +1,7 @@
-import { Meta } from '@storybook/addon-docs/blocks';
-import Code from './assets/code-brackets.svg';
-import Colors from './assets/colors.svg';
-import Comments from './assets/comments.svg';
-import Direction from './assets/direction.svg';
-import Flow from './assets/flow.svg';
-import Plugin from './assets/plugin.svg';
-import Repo from './assets/repo.svg';
-import StackAlt from './assets/stackalt.svg';
+import {Meta} from "@storybook/addon-docs/blocks";
+import Repo from "./assets/repo.svg";
 
-<Meta title="Example/Introduction" />
+<Meta title="Introduction" />
 
 <style>{`
   .subheading {
@@ -73,7 +66,7 @@ import StackAlt from './assets/stackalt.svg';
     display: block;
     margin-bottom: 2px;
   }
-  
+
   .link-item img {
     height: 40px;
     width: 40px;
@@ -84,6 +77,11 @@ import StackAlt from './assets/stackalt.svg';
   .link-item span {
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .link-item em {
+    font-size: 15px;
+    font-weight: bold;
   }
 
   .tip {
@@ -111,101 +109,134 @@ import StackAlt from './assets/stackalt.svg';
     display: inline-block;
   }
 
-  
+
 `}</style>
 
-# Welcome to Storybook
+# Welcome to Storybook of New Workflow App
 
 Storybook helps you build UI components in isolation from your app's business logic, data, and context.
 That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
 
-Browse example stories now by navigating to them in the sidebar.
-View their code in the `src/stories` directory to learn how they work.
-We recommend building UIs with a [**component-driven**](https://componentdriven.org) process starting with atomic components and ending with pages.
+Browse stories by navigating to them in the sidebar.
+Storybook recommend building UIs with a [**component-driven**](https://componentdriven.org) process starting with atomic components and ending with pages.
 
-<div className="subheading">Configure</div>
-
-<div className="link-list">
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/addons/addon-types"
-    target="_blank"
-  >
-    <img src={Plugin} alt="plugin" />
-    <span>
-      <strong>Presets for popular tools</strong>
-      Easy setup for TypeScript, SCSS and more.
-    </span>
-  </a>
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/configure/webpack"
-    target="_blank"
-  >
-    <img src={StackAlt} alt="Build" />
-    <span>
-      <strong>Build configuration</strong>
-      How to customize webpack and Babel
-    </span>
-  </a>
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/configure/styling-and-css"
-    target="_blank"
-  >
-    <img src={Colors} alt="colors" />
-    <span>
-      <strong>Styling</strong>
-      How to load and configure CSS libraries
-    </span>
-  </a>
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/get-started/setup#configure-storybook-for-your-stack"
-    target="_blank"
-  >
-    <img src={Flow} alt="flow" />
-    <span>
-      <strong>Data</strong>
-      Providers and mocking for data libraries
-    </span>
-  </a>
-</div>
-
-<div className="subheading">Learn</div>
+<div className="subheading">Directory Structure</div>
 
 <div className="link-list">
-  <a className="link-item" href="https://storybook.js.org/docs" target="_blank">
-    <img src={Repo} alt="repo" />
+    <div className="link-item">
     <span>
-      <strong>Storybook documentation</strong>
-      Configure, customize, and extend
+      <strong>assets</strong>
+      Contains <em>scss file </em> and <em>images</em> and <em>icons</em>.
     </span>
-  </a>
-  <a className="link-item" href="https://storybook.js.org/tutorials/" target="_blank">
-    <img src={Direction} alt="direction" />
+    </div>
+    <div className="link-item">
     <span>
-      <strong>In-depth guides</strong>
-      Best practices from leading teams
+      <strong>components</strong>
+      Contains all the base components which can be imported in other <em>
+        pages and page components.
+      </em>
     </span>
-  </a>
-  <a className="link-item" href="https://github.com/storybookjs/storybook" target="_blank">
-    <img src={Code} alt="code" />
+    </div>
+    <div className="link-item">
     <span>
-      <strong>GitHub project</strong>
-      View the source and add issues
+      <strong>modules</strong>
+      Contains three modules <em>
+        users, system-admin, operation-manager
+      </em> which includes <em>pages</em> defined in route.
     </span>
-  </a>
-  <a className="link-item" href="https://discord.gg/storybook" target="_blank">
-    <img src={Comments} alt="comments" />
+    </div>
+    <div className="link-item">
     <span>
-      <strong>Discord chat</strong>
-      Chat with maintainers and the community
+      <strong>store</strong>
+      Redux store for the <em>modules</em>
     </span>
-  </a>
+    </div>
+    <div className="link-item">
+    <span>
+      <strong>stories</strong>
+      stories for each <em>components</em> and <em>pages</em>
+    </span>
+    </div>
+    <div className="link-item">
+    <span>
+      <strong>utils</strong>
+      For <em>utility</em> and <em>helper</em> functions
+    </span>
+    </div>
 </div>
+
+<div className="subheading">Technology Used</div>
+
+<div className="link-list">
+    <a className="link-item" href="https://formik.org/" target="_blank">
+        <img src={Repo} alt="repo" />
+        <span>
+      <strong>Formik</strong>
+      For building forms
+    </span>
+    </a>
+    <a className="link-item" href="https://ant.design/" target="_blank">
+        <img src={Repo} alt="repo" />
+        <span>
+      <strong>Ant Design</strong>
+      Design Framework
+    </span>
+    </a>
+    <a
+        className="link-item"
+        href="https://github.com/alibaba/react-intl-universal"
+        target="_blank"
+    >
+        <img src={Repo} alt="repo" />
+        <span>
+      <strong>React Internationalization</strong>
+      Language support
+    </span>
+    </a>
+    <a
+        className="link-item"
+        href="https://github.com/jquense/yup"
+        target="_blank"
+    >
+        <img src={Repo} alt="repo" />
+        <span>
+      <strong>Yup</strong>
+      Schema validator
+    </span>
+    </a>
+    <a className="link-item" href="https://formbuilder.online/" target="_blank">
+        <img src={Repo} alt="repo" />
+        <span>
+      <strong>Drag and Drop form</strong>
+      Form Builder
+    </span>
+    </a>
+    <a className="link-item" href="https://storybook.js.org/" target="_blank">
+        <img src={Repo} alt="repo" />
+        <span>
+      <strong>Storybook</strong>
+      For ui documentation
+    </span>
+    </a>
+    <a
+        className="link-item"
+        href="https://www.typescriptlang.org/"
+        target="_blank"
+    >
+        <img src={Repo} alt="repo" />
+        <span>
+      <strong>Typescript</strong>
+    </span>
+    </a>
+</div>
+
+<div className="subheading">NB</div>
+
+> - #### If possible, we can use [**presentation-container component**](https://dev.to/olenadrugalya/presentational-and-container-components-in-react-4gfj) pattern
+
+> - #### If possible, we can keep updating the stories/documentation of ui here
 
 <div className="tip-wrapper">
-  <span className="tip">Tip</span>Edit the Markdown in{' '}
-  <code>src/stories/Introduction.stories.mdx</code>
+    <span className="tip">Tip</span>Edit the Markdown in{" "}
+    <code>src/stories/Introduction.stories.mdx</code>
 </div>

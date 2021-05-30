@@ -30,9 +30,10 @@ module.exports = {
     'import/prefer-default-export': 'off',
     quotes: ['error', 'single', { allowTemplateLiterals: true, avoidEscape: true }],
     'jsx-quotes': ['error', 'prefer-single'],
-    'max-len': [2, 100],
+    'max-len': [2, 120],
     'react/jsx-one-expression-per-line': ['off'],
     'react/jsx-props-no-spreading': 'off',
+    'no-underscore-dangle': 'off',
   },
   overrides: [
     {

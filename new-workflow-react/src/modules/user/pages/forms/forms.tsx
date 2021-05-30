@@ -2,7 +2,7 @@
 import $ from 'jquery';
 import React, { useEffect, useRef, useState } from 'react';
 import intl from 'react-intl-universal';
-import ChangeLang from '../../components/change-lang';
+import ChangeLang from '../../../../components/change-lang';
 import FormIntegrateContainer from './form-integrate/form-integrate-container';
 
 interface Props {

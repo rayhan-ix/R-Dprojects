@@ -1,0 +1,35 @@
+$base-btn-minWidth-without-icon: 110px;
+$base-btn-minHeight-without-icon: 35px;
+
+$base-btn-minWidth-with-icon: 120px;
+$base-btn-minHeight-with-icon: 40px;
+
+$base-btn-minWidth: 110px;
+$base-btn-minHeight: 35px;
+
+$base-icon-btn-minWidth: 20px;
+$base-icon-btn-minHeight: 20px;
+
+.base-btn {
+  border-radius: 5px;
+  min-width: $base-btn-minWidth;
+  min-height: $base-btn-minHeight;
+}
+
+.base-btn-without-icon {
+  @extend .base-btn;
+  min-width: $base-btn-minWidth-without-icon;
+  min-height: $base-btn-minHeight-without-icon;
+}
+
+.base-btn-with-icon {
+  @extend .base-btn;
+  min-width: $base-btn-minWidth-with-icon;
+  min-height: $base-btn-minHeight-with-icon;
+}
+
+.base-icon-btn {
+  @extend .base-btn;
+  min-width: $base-icon-btn-minWidth;
+  min-height: $base-icon-btn-minHeight;
+}
