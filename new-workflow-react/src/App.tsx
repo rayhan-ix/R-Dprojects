@@ -7,10 +7,10 @@ import _ from 'lodash';
 import http from 'axios';
 import Loader from 'react-loader-spinner';
 import store from './store';
-import ErrorFallback from './error-boundary/error-boundary';
-import Layout from './pages/layout/layout';
-import FormsContainer from './pages/forms/forms-container';
-import FormIntegrateContainer from './pages/forms/form-integrate/form-integrate-container';
+import ErrorFallback from './error-boundary/errorBoundary';
+import Layout from './modules/layout';
+import FormsContainer from './modules/user/pages/forms/forms-container';
+import FormIntegrateContainer from './modules/user/pages/forms/form-integrate/form-integrate-container';
 
 const SUPPOER_LOCALES = [
   {
