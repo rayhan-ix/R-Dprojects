@@ -1,0 +1,10 @@
+@import "../common/base-table";
+
+.base-approval-table {
+  .ant-table-thead {
+    .ant-table-cell {
+      background: #E7F2FA;
+      border-top: 4px solid #44809C;
+    }
+  }
+}

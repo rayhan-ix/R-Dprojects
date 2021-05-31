@@ -1,7 +1,5 @@
 /* eslint-disable no-undef,no-unused-vars */
 declare module 'redux-batch-middleware';
-declare module '*.scss';
-declare module '*.css';
 
 interface Window {
   $: JQueryStatic;
