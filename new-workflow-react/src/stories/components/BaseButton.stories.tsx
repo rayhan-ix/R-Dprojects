@@ -2,7 +2,7 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { PlusOutlined, SearchOutlined } from '@ant-design/icons';
 
-import { BaseButtonProps, BaseButton } from '../../components/base-button';
+import { BaseButtonProps, BaseButton } from '../../base-components/base-button';
 
 export default {
   title: 'BaseComponents/Button',

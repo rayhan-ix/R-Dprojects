@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { ReactNode } from 'react';
 import { Button } from 'antd';
-import '../assets/scss/components/base-button.scss';
+import '../assets/scss/base-components/base-button.scss';
 import clsx from 'clsx';
 
 export interface BaseButtonProps {
