@@ -1,7 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { ReactNode } from 'react';
 import Table, { ColumnProps } from 'antd/lib/table';
-import { RightCircleFilled } from '@ant-design/icons';
+import { CheckCircleOutlined, CloseOutlined, RightCircleFilled, UndoOutlined } from '@ant-design/icons';
+import '../../assets/scss/base-components/approval-level-table.scss';
+import { Col, Divider, Input, Row } from 'antd';
+import { BaseButton } from '../base-button';
 
 export interface ColumnType {
   /**
@@ -36,11 +39,48 @@ export interface ApprovalLevelTableProps {
 }
 
 function ApprovalDecisionBlock(props: any) {
-  console.log(props);
+  const { TextArea } = Input;
 
   return (
     <>
-      <h1>hello</h1>
+      <div style={{ background: '#f0f0f0' }}>
+        <div style={{ padding: 10 }}>
+          <Row justify='start' gutter={[8, 8]}>
+            <Col span={24}>
+              <Row justify='start' gutter={[8, 0]}>
+                <Col span={7} style={{ paddingRight: 0, flex: '0 0 27%', maxWidth: '27%' }}>
+                  <BaseButton
+                    buttonType='button'
+                    onClick={() => alert('accept')}
+                    label='Approve'
+                    icon={<CheckCircleOutlined />}
+                  />
+                </Col>
+                <Divider type='vertical' style={{ height: 35, top: 2 }} />
+                <Col span={7}>
+                  <BaseButton
+                    buttonType='button'
+                    onClick={() => alert('Decline')}
+                    label='Decline'
+                    icon={<CloseOutlined />}
+                  />
+                </Col>
+                <Col span={7}>
+                  <BaseButton
+                    buttonType='button'
+                    onClick={() => alert('Sendback')}
+                    label='SendBack'
+                    icon={<UndoOutlined />}
+                  />
+                </Col>
+              </Row>
+            </Col>
+            <Col span={24}>
+              <TextArea rows={2} />
+            </Col>
+          </Row>
+        </div>
+      </div>
     </>
   );
 }
@@ -113,7 +153,7 @@ const columns: Array<ColumnType> = [
         obj.props.colSpan = 0;
         return obj;
       }
-      return null;
+      return text;
     },
   },
   {
@@ -128,7 +168,13 @@ export const ApprovalLevelTable = (props: ApprovalLevelTableProps) => {
 
   return (
     <>
-      <Table columns={columns} dataSource={data} pagination={false} bordered />
+      <Table
+        className='base-approval-table base-table'
+        columns={columns}
+        dataSource={data}
+        pagination={false}
+        bordered
+      />
     </>
   );
 };

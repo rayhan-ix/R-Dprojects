@@ -1,0 +1,17 @@
+.base-table {
+  .ant-table-container table > thead > tr:first-child th:first-child {
+    border-top-left-radius: 5px
+  }
+  .ant-table-container table > thead > tr:last-child th:last-child {
+    border-top-right-radius: 5px
+  }
+  .ant-table-container table > tbody > tr:last-child td:first-child {
+    border-bottom-left-radius: 5px
+  }
+  .ant-table-container table > tbody > tr:last-child td:last-child {
+    border-bottom-right-radius: 5px
+  }
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table > thead > tr > th {
+    border-right: none;
+  }
+}
