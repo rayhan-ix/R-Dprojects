@@ -35,7 +35,7 @@ function App() {
     }
 
     http
-      .get(`locales/${currentLocale}.json`)
+      .get(`locales/${currentLocale}.json/`)
       .then((res) =>
         // init method will load CLDR locale data according to currentLocale
         intl.init({

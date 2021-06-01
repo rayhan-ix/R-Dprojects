@@ -38,6 +38,9 @@ export interface ApprovalLevelTableProps {
   data: Array<any>;
 }
 
+/*
+   TODO: Have to add onClick Handler for Approve, Decline and SendBack
+ */
 function ApprovalDecisionBlock(props: any) {
   const { TextArea } = Input;
 

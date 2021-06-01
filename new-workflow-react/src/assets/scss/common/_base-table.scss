@@ -14,4 +14,10 @@
   .ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table > thead > tr > th {
     border-right: none;
   }
+  .ant-table-thead {
+    .ant-table-cell {
+      background: #E7F2FA;
+      border-top: 4px solid #44809C;
+    }
+  }
 }
