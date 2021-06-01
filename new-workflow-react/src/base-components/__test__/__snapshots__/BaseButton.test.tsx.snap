@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Testing Snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="ant-btn ant-btn-primary base-btn-without-icon"
+    type="button"
+  >
+    <span>
+      Primary
+    </span>
+  </button>
+</DocumentFragment>
+`;

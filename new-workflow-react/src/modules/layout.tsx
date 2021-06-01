@@ -14,7 +14,7 @@ const Layout = () => {
     <>
       <BaseButton buttonType='button' label='Button' onClick={() => alert('lalala')} />
       <h1>Hello World !@!@@!</h1>
-      <h1>{intl.get('Hello')}</h1>
+      <h1 data-testid='change-language'>{intl.get('Hello')}</h1>
       <ChangeLang />
       <button type='button' onClick={() => navigate()}>
         Go to form

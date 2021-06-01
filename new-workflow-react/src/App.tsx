@@ -4,13 +4,13 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { Provider } from 'react-redux';
 import intl from 'react-intl-universal';
 import _ from 'lodash';
-import http from 'axios';
 import Loader from 'react-loader-spinner';
 import store from './store';
 import ErrorFallback from './error-boundary/errorBoundary';
 import Layout from './modules/layout';
 import FormsContainer from './modules/user/pages/forms/forms-container';
 import FormIntegrateContainer from './modules/user/pages/forms/form-integrate/form-integrate-container';
+import { locales } from './languages';
 
 const SUPPOER_LOCALES = [
   {
@@ -33,18 +33,11 @@ function App() {
     if (!_.find(SUPPOER_LOCALES, { value: currentLocale })) {
       currentLocale = 'en-US';
     }
-
-    http
-      .get(`locales/${currentLocale}.json/`)
-      .then((res) =>
-        // init method will load CLDR locale data according to currentLocale
-        intl.init({
-          currentLocale,
-          locales: {
-            [currentLocale]: res.data,
-          },
-        })
-      )
+    intl
+      .init({
+        currentLocale,
+        locales,
+      })
       .then(() => setDone(true));
   };
 
