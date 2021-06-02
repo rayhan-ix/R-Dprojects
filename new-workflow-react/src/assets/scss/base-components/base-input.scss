@@ -1,0 +1,13 @@
+$base-input-100p: 100%;
+$base-input-50p: 50%;
+$base-input-height: 30px;
+
+.base-input {
+  border-radius: 5px;
+  width: $base-input-100p;
+}
+
+.base-input-50p {
+  border-radius: 5px;
+  width: $base-input-50p;
+}
