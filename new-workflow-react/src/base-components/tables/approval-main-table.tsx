@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Table } from 'antd';
+import { Card, Col, Row, Table } from 'antd';
 import { ApprovalLevelTable, ColumnType } from './approval-level-table';
 
 export interface ApprovalMainTableProps {
@@ -13,9 +13,16 @@ function ExpandedRowComponent(props: any) {
   const { levelsDetail } = props;
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'center', padding: 20 }}>
-        <ApprovalLevelTable data={levelsDetail} />
-      </div>
+      <Row justify='start' gutter={[8, 0]}>
+        <Col span={24}>
+          <Card>
+            <h1>hello</h1>
+          </Card>
+        </Col>
+        <Col span={24}>
+          <ApprovalLevelTable data={levelsDetail} />
+        </Col>
+      </Row>
     </>
   );
 }

@@ -31,8 +31,8 @@ export interface BaseButtonProps {
   buttonType: 'button' | 'reset' | 'submit';
 
   /**
-   * onClick handler for
-   * @param args
+   * onClick handler
+   * takes 'args' as parameter
    */
   onClick: (args?: any) => any;
 }
