@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tree } from 'antd';
 import '../../assets/scss/base-components/base-tree-view.scss';
-import { FolderFilled, FileTextFilled, FileAddFilled } from '@ant-design/icons';
+import { FolderFilled, FileFilled, FileAddFilled, FileTextFilled } from '@ant-design/icons';
 
 const { DirectoryTree } = Tree;
 
@@ -21,7 +21,7 @@ const treeData = [
           {
             title: 'Overtime application_Sendai Customer Center',
             key: 'file-300',
-            icon: <FileTextFilled className='large-folder' />,
+            icon: <FileFilled className='large-folder' />,
             children: [
               {
                 title: 'Create New',
@@ -38,7 +38,7 @@ const treeData = [
           {
             title: 'Holiday work application_Tokyo head office',
             key: 'file-301',
-            icon: <FileTextFilled className='large-folder' />,
+            icon: <FileFilled className='large-folder' />,
             children: [
               {
                 title: 'Create New',
@@ -55,7 +55,7 @@ const treeData = [
           {
             title: 'Company-wide report_web application',
             key: 'file-302',
-            icon: <FileTextFilled className='large-folder' />,
+            icon: <FileFilled className='large-folder' />,
             children: [
               {
                 title: 'Create New',
@@ -74,7 +74,7 @@ const treeData = [
       {
         title: 'Regular application_Tokyo head office',
         key: 'file-100',
-        icon: <FileTextFilled className='large-folder' />,
+        icon: <FileFilled className='large-folder' />,
         children: [
           {
             title: 'Create New',
@@ -98,7 +98,7 @@ const treeData = [
       {
         title: 'Settlement',
         key: 'file-200',
-        icon: <FileTextFilled className='large-folder' />,
+        icon: <FileFilled className='large-folder' />,
         children: [
           {
             title: 'Create New',
