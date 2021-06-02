@@ -75,7 +75,7 @@ const treeData = [
 const Demo = () => {
   const [expandedKeys, setExpandedKeys] = useState<React.Key[]>();
   const [checkedKeys, setCheckedKeys] = useState<React.Key[]>();
-  const [selectedCheckedKeyBehind, setSelectedCheckedKeyBehind] = useState([]);
+  const [selectedCheckedKeyBehind, setSelectedCheckedKeyBehind] = useState<any[]>([]);
   const [selectedKeys, setSelectedKeys] = useState<React.Key[]>([]);
   const [autoExpandParent, setAutoExpandParent] = useState<boolean>(true);
   const [showIcon] = useState<boolean>(true);
@@ -88,14 +88,14 @@ const Demo = () => {
     setAutoExpandParent(false);
   };
 
-  const commonForSelectOrChecked = (selectedItem) => {
+  const commonForSelectOrChecked = (selectedItem: any) => {
     const currentSelectedCheckBox = {
       key: selectedItem.node.key,
       parentKey: selectedItem.node.parentKey,
     };
     const tempArray = selectedCheckedKeyBehind;
     if (tempArray.length > 0) {
-      const newArray = tempArray.filter((element) => element.parentKey !== selectedItem.node.parentKey);
+      const newArray: any = tempArray.filter((element: any) => element.parentKey !== selectedItem.node.parentKey);
       newArray.push(currentSelectedCheckBox);
       setSelectedCheckedKeyBehind(newArray);
     } else {

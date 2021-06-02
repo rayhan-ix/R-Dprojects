@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Tree } from 'antd';
 import '../../assets/scss/base-components/base-tree-view.scss';
 import { FolderFilled, FileFilled, FileAddFilled, FileTextFilled } from '@ant-design/icons';
@@ -117,15 +117,28 @@ const treeData = [
 ];
 
 const Demo = () => {
+  const [autoExpandParent, setAutoExpandParent] = useState<boolean>(true);
   const onSelect = (keys: any, info: any) => {
     console.log('Trigger Select', keys, info);
   };
 
-  const onExpand = () => {
-    console.log('Trigger Expand');
+  const onExpand = (expandedKeysValue: React.Key[]) => {
+    console.log('onExpand', expandedKeysValue);
+    // if not set autoExpandParent to false, if children expanded, parent can not collapse.
+    // or, you can remove all expanded children keys.
+
+    setAutoExpandParent(false);
   };
 
-  return <DirectoryTree showIcon onSelect={onSelect} onExpand={onExpand} treeData={treeData} />;
+  return (
+    <DirectoryTree
+      showIcon
+      onSelect={onSelect}
+      onExpand={onExpand}
+      treeData={treeData}
+      autoExpandParent={autoExpandParent}
+    />
+  );
 };
 
 export const TreeDirectory = () => <Demo />;
