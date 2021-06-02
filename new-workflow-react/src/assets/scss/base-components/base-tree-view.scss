@@ -1,0 +1,30 @@
+.tree-only-leaf-note-checkbox {
+  .ant-tree-checkbox-disabled {
+    display: none;
+  }
+}
+.large-folder {
+  font-size: 30px;
+}
+
+.ant-tree-title {
+  padding-left: 10px;
+}
+
+.ant-tree.ant-tree-directory .ant-tree-treenode {
+  height: 40px;
+  padding: 3px 0px 0px 0px;
+}
+
+.ant-tree-icon__customize .large-folder svg {
+  fill: #6e92ff;
+}
+
+.ant-tree.ant-tree-directory .ant-tree-treenode-selected:before,
+.ant-tree.ant-tree-directory .ant-tree-treenode-selected:hover:before {
+  background: #d6d7d8;
+}
+
+.ant-tree.ant-tree-directory .ant-tree-treenode .ant-tree-node-content-wrapper.ant-tree-node-selected {
+  color: inherit;
+}

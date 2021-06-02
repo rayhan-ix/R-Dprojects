@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Tree } from 'antd';
-import '../../assets/scss/base-components/base-checkedTreeOnlyLeaf.scss';
+import '../../assets/scss/base-components/base-tree-view.scss';
 import { FolderOpenTwoTone } from '@ant-design/icons';
 
 export interface CheckedTreeOnlyLeafProps {
