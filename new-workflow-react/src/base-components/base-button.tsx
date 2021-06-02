@@ -3,6 +3,7 @@ import React, { ReactNode } from 'react';
 import { Button } from 'antd';
 import '../assets/scss/base-components/base-button.scss';
 import clsx from 'clsx';
+import * as _ from 'lodash';
 
 export interface BaseButtonProps {
   /**
@@ -53,7 +54,7 @@ export const BaseButton = (props: BaseButtonProps) => {
       icon={icon}
       onClick={onClick}
     >
-      {label}
+      {_.isEmpty(label) && _.isNull(icon) ? 'Button' : label}
     </Button>
   );
 };
