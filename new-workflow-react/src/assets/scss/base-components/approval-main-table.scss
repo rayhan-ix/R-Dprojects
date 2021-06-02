@@ -1,0 +1,26 @@
+.approval-row-card {
+  .ant-card-head {
+    background: #E7F2FA;
+    .ant-card-head-title {
+      padding: 10px 0;
+    }
+  }
+  .ant-card-body {
+    .ant-row {
+      border-top: 1px solid #f0f0f0;
+      border-right: 1px solid #f0f0f0;
+      border-left: 1px solid #f0f0f0;
+      .ant-col:first-of-type {
+        background-color: #E3E3E3;
+      }
+    }
+    .ant-row:last-of-type {
+      border-bottom: 1px solid #f0f0f0;
+      border-right: 1px solid #f0f0f0;
+      border-left: 1px solid #f0f0f0;
+    }
+    .ant-col {
+      padding: 10px 15px;
+    }
+  }
+}

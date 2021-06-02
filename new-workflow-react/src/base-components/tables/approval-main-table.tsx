@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { Table } from 'antd';
+import { Card, Col, Row, Table } from 'antd';
+import { EditOutlined } from '@ant-design/icons';
 import { ApprovalLevelTable, ColumnType } from './approval-level-table';
+import '../../assets/scss/base-components/approval-main-table.scss';
+import { BaseButton } from '../base-button';
 
 export interface ApprovalMainTableProps {
   /**
@@ -9,13 +12,62 @@ export interface ApprovalMainTableProps {
   data: any;
 }
 
+// TODO: Hardcoded Data. Has to change later
 function ExpandedRowComponent(props: any) {
   const { levelsDetail } = props;
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'center', padding: 20 }}>
-        <ApprovalLevelTable data={levelsDetail} />
-      </div>
+      <Row justify='start' gutter={[8, 0]}>
+        <Col span={24} style={{ paddingBottom: 20 }}>
+          <Card title='Request Details' className='approval-row-card'>
+            <Row>
+              <Col span={6}>Requester</Col>
+              <Col span={18}>Altair</Col>
+            </Row>
+            <Row>
+              <Col span={6}>Request Date</Col>
+              <Col span={18}>2020/12/2</Col>
+            </Row>
+            <Row>
+              <Col span={6}>Request No</Col>
+              <Col span={18}>220120122</Col>
+            </Row>
+            <Row>
+              <Col span={6}>Spreadsheet</Col>
+              <Col span={18}>
+                <BaseButton
+                  buttonType='button'
+                  onClick={() => alert('Spreadsheet')}
+                  label='Confirm'
+                  icon={<EditOutlined />}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col span={6}>Attachment(s)</Col>
+              <Col span={18}>
+                <BaseButton
+                  buttonType='button'
+                  onClick={() => alert('Upload')}
+                  label='Upload'
+                  icon={<EditOutlined />}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col span={6}>Review Organization</Col>
+              <Col span={18}>Something</Col>
+            </Row>
+            <Row>
+              <Col span={6}>Reviewer</Col>
+              <Col span={18}>Arno</Col>
+            </Row>
+          </Card>
+        </Col>
+        <Col span={24} style={{ paddingBottom: 20 }}>
+          <ApprovalLevelTable data={levelsDetail} />
+        </Col>
+      </Row>
     </>
   );
 }
