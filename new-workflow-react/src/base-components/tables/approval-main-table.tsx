@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Col, Row, Table } from 'antd';
+import { Card, Col, message, Row, Table } from 'antd';
 import { EditOutlined } from '@ant-design/icons';
 import { ApprovalLevelTable, ColumnType } from './approval-level-table';
 import '../../assets/scss/base-components/approval-main-table.scss';
@@ -37,7 +37,7 @@ function ExpandedRowComponent(props: any) {
               <Col span={18}>
                 <BaseButton
                   buttonType='button'
-                  onClick={() => alert('Spreadsheet')}
+                  onClick={() => message.info('confirm')}
                   label='Confirm'
                   icon={<EditOutlined />}
                 />
@@ -48,7 +48,7 @@ function ExpandedRowComponent(props: any) {
               <Col span={18}>
                 <BaseButton
                   buttonType='button'
-                  onClick={() => alert('Upload')}
+                  onClick={() => message.info('upload')}
                   label='Upload'
                   icon={<EditOutlined />}
                 />

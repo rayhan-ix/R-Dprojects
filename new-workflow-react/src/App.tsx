@@ -4,13 +4,13 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { Provider } from 'react-redux';
 import intl from 'react-intl-universal';
 import _ from 'lodash';
-import Loader from 'react-loader-spinner';
 import store from './store';
 import ErrorFallback from './error-boundary/errorBoundary';
 import Layout from './modules/layout';
 import FormsContainer from './modules/user/pages/forms/forms-container';
 import FormIntegrateContainer from './modules/user/pages/forms/form-integrate/form-integrate-container';
 import { locales } from './languages';
+import LoaderComponent from './base-components/loader-component';
 
 const SUPPOER_LOCALES = [
   {
@@ -56,7 +56,7 @@ function App() {
       </Provider>
     </ErrorBoundary>
   ) : (
-    <Loader type='Rings' color='#00BFFF' height={100} width={100} visible={!done} />
+    <LoaderComponent loading={!done} />
   );
 }
 
