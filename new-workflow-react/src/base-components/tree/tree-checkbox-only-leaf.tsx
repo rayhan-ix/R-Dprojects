@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useState } from 'react';
 import { Tree } from 'antd';
 import '../../assets/scss/base-components/base-tree-view.scss';

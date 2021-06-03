@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { CheckedTree, CheckedTreeProps } from '../../../base-components/tree/tree-checkbox';
