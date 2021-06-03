@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import { TreeDirectory, TreeDirectoryProps } from '../../../base-components/tree/tree-Directory';
+import { TreeDirectory, TreeDirectoryProps } from '../../../base-components/tree/tree-directory-big-icon';
 
 export default {
   title: 'BaseComponents/Tree-Directory',

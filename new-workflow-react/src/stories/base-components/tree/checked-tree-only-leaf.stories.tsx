@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import { CheckedTreeOnlyLeaf, CheckedTreeOnlyLeafProps } from '../../../base-components/tree/tree-checkbox-OnlyLeaf';
+import { CheckedTreeOnlyLeaf, CheckedTreeOnlyLeafProps } from '../../../base-components/tree/tree-checkbox-only-leaf';
 
 export default {
   title: 'BaseComponents/Tree-CheckBox-OnlyLeaf-Radio',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tree } from 'antd';
-import { FolderOpenTwoTone, FileTwoTone } from '@ant-design/icons';
+// import { FolderOpenTwoTone, FileTwoTone } from '@ant-design/icons';
 
 const { DirectoryTree } = Tree;
 
@@ -10,22 +10,19 @@ const treeData = [
   {
     title: 'Root',
     key: '0',
-    icon: <FolderOpenTwoTone />,
     children: [
       {
         title: 'Equipment rental',
         key: '100',
-        icon: <FolderOpenTwoTone />,
         children: [
           {
             title: 'Approval',
             key: '201',
-            icon: <FolderOpenTwoTone />,
             children: [
               {
                 title: 'Application classification',
                 key: '301',
-                icon: <FileTwoTone />,
+                isLeaf: true,
               },
             ],
           },
@@ -34,7 +31,7 @@ const treeData = [
       {
         title: 'PSC Co., Ltd.',
         key: '2',
-        icon: <FileTwoTone />,
+        isLeaf: true,
       },
     ],
   },
