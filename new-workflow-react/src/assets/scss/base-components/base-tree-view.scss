@@ -1,22 +1,4 @@
-.tree-only-leaf-note-checkbox {
-  .ant-tree-checkbox-disabled {
-    display: none;
-  }
-}
-.large-folder {
-  font-size: 30px;
-}
-
-.ant-tree-title {
-  padding-left: 10px;
-}
-
-.ant-tree.ant-tree-directory .ant-tree-treenode {
-  height: 40px;
-  padding: 3px 0px 0px 0px;
-}
-
-.ant-tree-icon__customize .large-folder svg {
+.ant-tree-icon__customize svg {
   fill: #6e92ff;
 }
 
@@ -27,4 +9,76 @@
 
 .ant-tree.ant-tree-directory .ant-tree-treenode .ant-tree-node-content-wrapper.ant-tree-node-selected {
   color: inherit;
+}
+
+.small-folder {
+  font-size: 20px;
+}
+.ant-tree-title {
+  padding-left: 3px;
+}
+.ant-tree-checkbox {
+  margin: 4px 3px 0 0;
+}
+.ant-tree .ant-tree-node-content-wrapper .ant-tree-iconEle {
+  width: 20px;
+  height: 20px;
+}
+.ant-tree-icon__customize svg {
+  font-size: 17px;
+  margin-top: 4px;
+}
+
+.tree-only-leaf-note-checkbox,
+.tree-independent-checkbox {
+  // .anticon-file {
+  //   display: none;
+  // }
+
+  .ant-tree-checkbox-disabled {
+    display: none;
+  }
+}
+
+// //Only Leaf node is checkbox
+// .tree-only-leaf-note-checkbox {
+//   .ant-tree-checkbox-disabled {
+//     display: none;
+//   }
+//   .ant-tree-checkbox {
+//     margin: 4px 0 0 0;
+//   }
+//   .ant-tree-icon__customize svg {
+//     font-size: 19px;
+//     margin-top: 3px;
+//   }
+//   .ant-tree-title {
+//     padding-left: 3px;
+//   }
+// }
+
+// CheckBox with direcotry
+.tree-large-folder-icon {
+  .large-folder {
+    font-size: 30px !important;
+  }
+
+  .ant-tree-icon__customize svg {
+    font-size: 30px !important;
+  }
+  .ant-tree-title {
+    padding-left: 10px !important;
+    line-height: 30px;
+  }
+  .ant-tree-treenode {
+    height: 40px !important;
+  }
+  .ant-tree-icon__customize {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .ant-tree-switcher .ant-select-tree-switcher-icon,
+  .ant-tree-switcher .ant-tree-switcher-icon {
+    margin-top: 10px;
+  }
 }

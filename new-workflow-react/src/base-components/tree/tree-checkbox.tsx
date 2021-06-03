@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Tree } from 'antd';
 
+const { DirectoryTree } = Tree;
 export interface CheckedTreeProps {
   showCheckBox?: Boolean;
 }
@@ -13,7 +14,13 @@ const treeData = [
       {
         title: 'General management',
         key: '201',
-        children: [{ title: 'Taro (general affairs)', key: '301' }],
+        children: [
+          {
+            title: 'Taro (general affairs)',
+            key: '301',
+            isLeaf: true,
+          },
+        ],
       },
     ],
   },
@@ -25,14 +32,15 @@ const treeData = [
         title: '(Overseas Division) Section 1',
         key: '202',
         children: [
-          { title: 'Development Taro', key: '302' },
-          { title: 'User PSC', key: '303' },
-          { title: 'Development Taro', key: '304' },
+          { title: 'Development Taro', key: '302', isLeaf: true },
+          { title: 'User PSC', key: '303', isLeaf: true },
+          { title: 'Development Taro', key: '304', isLeaf: true },
         ],
       },
       {
         title: 'Division 1 General Manager',
         key: '401',
+        isLeaf: true,
       },
     ],
   },
@@ -65,7 +73,8 @@ const Demo = () => {
   };
 
   return (
-    <Tree
+    <DirectoryTree
+      className='tree-independent-checkbox'
       checkable
       onExpand={onExpand}
       expandedKeys={expandedKeys}
@@ -78,6 +87,8 @@ const Demo = () => {
       showIcon={showIcon}
       checkStrictly
     />
+
+    // <DirectoryTree checkable onSelect={onSelect} treeData={treeData} autoExpandParent={autoExpandParent} />
   );
 };
 

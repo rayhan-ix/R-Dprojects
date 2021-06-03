@@ -49,7 +49,9 @@ const Demo = () => {
     console.log('Trigger Expand');
   };
 
-  return <DirectoryTree showIcon onSelect={onSelect} onExpand={onExpand} treeData={treeData} />;
+  return (
+    <DirectoryTree className='tree-root-line' showIcon onSelect={onSelect} onExpand={onExpand} treeData={treeData} />
+  );
 };
 
 export const LinedTree = () => <Demo />;
