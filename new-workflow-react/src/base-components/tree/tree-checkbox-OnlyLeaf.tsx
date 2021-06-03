@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Tree } from 'antd';
 import '../../assets/scss/base-components/base-tree-view.scss';
-import { FolderOpenTwoTone } from '@ant-design/icons';
+// import { FolderOpenTwoTone } from '@ant-design/icons';
 
+const { DirectoryTree } = Tree;
 export interface CheckedTreeOnlyLeafProps {
   showCheckBox?: Boolean;
 }
@@ -12,28 +13,29 @@ const treeData = [
     title: 'Tokyo Head Office',
     key: '100',
     disableCheckbox: true,
-    icon: <FolderOpenTwoTone />,
     children: [
       {
         title: 'Officer',
         key: 'parent-1',
         disableCheckbox: true,
-        icon: <FolderOpenTwoTone />,
         children: [
           {
             title: '“Executive” All',
             key: 'leaf-node-1',
             parentKey: 'parent-1',
+            isLeaf: true,
           },
           {
             title: 'All Within Organization “Executives”',
             key: 'leaf-node-2',
             parentKey: 'parent-1',
+            isLeaf: true,
           },
           {
             title: 'Most Direct “Executive”',
             key: 'leaf-node-3',
             parentKey: 'parent-1',
+            isLeaf: true,
           },
         ],
       },
@@ -43,28 +45,29 @@ const treeData = [
     title: 'Overseas Business Department',
     key: '101',
     disableCheckbox: true,
-    icon: <FolderOpenTwoTone />,
     children: [
       {
         title: '(Overseas Division) Section 1',
         key: 'parent-2',
         disableCheckbox: true,
-        icon: <FolderOpenTwoTone />,
         children: [
           {
             title: 'Development Taro',
             key: '601',
             parentKey: 'parent-2',
+            isLeaf: true,
           },
           {
             title: 'User PSC',
             key: '602',
             parentKey: 'parent-2',
+            isLeaf: true,
           },
           {
             title: 'Development Taro',
             key: '603',
             parentKey: 'parent-2',
+            isLeaf: true,
           },
         ],
       },
@@ -123,7 +126,23 @@ const Demo = () => {
   };
 
   return (
-    <Tree
+    // <Tree
+    //   className='tree-only-leaf-note-checkbox'
+    //   checkable
+    //   onExpand={onExpand}
+    //   expandedKeys={expandedKeys}
+    //   autoExpandParent={autoExpandParent}
+    //   onCheck={onCheck}
+    //   checkedKeys={checkedKeys}
+    //   onSelect={onSelect}
+    //   selectedKeys={selectedKeys}
+    //   treeData={treeData}
+    //   showIcon={showIcon}
+    //   checkStrictly
+    //   multiple
+    // />
+
+    <DirectoryTree
       className='tree-only-leaf-note-checkbox'
       checkable
       onExpand={onExpand}
