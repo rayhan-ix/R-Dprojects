@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { BaseButton } from '../base-button';
-import { IconButton, WithIcon } from '../../stories/base-components/BaseButton.stories';
+import { IconButton, WithIcon } from '../../stories/base-components/base-button.stories';
 
 describe('Button Testing', () => {
   it('should render normal button', () => {
