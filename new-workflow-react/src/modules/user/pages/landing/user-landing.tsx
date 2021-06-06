@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Col, Divider, Layout, Modal, Row } from 'antd';
+import { Col, Divider, Layout, Modal, Row, Select } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
 import LoaderComponent from '../../../../base-components/loader-component';
 import '../../../../assets/scss/modules/users/user-landing.scss';
@@ -16,6 +16,7 @@ export const UserLanding = (props: UserLandingProps) => {
   const { loading } = props;
   const { Content, Sider } = Layout;
   const [showSettingsModal, setShowSettingsModal] = useState(false);
+  const { Option } = Select;
 
   const openSettingsModal = () => {
     setShowSettingsModal(true);
@@ -83,14 +84,57 @@ export const UserLanding = (props: UserLandingProps) => {
                   <Row gutter={[0, 0]}>
                     <Col span={24}>
                       <Row>
-                        <Col span={4}>Label</Col>
-                        <Col span={20}>Time</Col>
+                        <Col span={6} style={{ border: '1px solid black' }}>
+                          <div style={{ background: '#F1E9DD' }}>
+                            <div style={{ padding: 15 }}>Timezones</div>
+                          </div>
+                        </Col>
+                        <Col
+                          span={18}
+                          style={{
+                            borderTop: '1px solid black',
+                            borderBottom: '1px solid black',
+                            borderRight: '1px solid black',
+                          }}
+                        >
+                          <div style={{ padding: 10 }}>
+                            <Select defaultValue='6' style={{ width: 250 }}>
+                              <Option value='6'>Dhaka</Option>
+                              <Option value='9'>Tokyo</Option>
+                              <Option value='-9'>Alaska</Option>
+                            </Select>
+                          </div>
+                        </Col>
                       </Row>
                     </Col>
                     <Col span={24}>
                       <Row>
-                        <Col span={4}>Label</Col>
-                        <Col span={20}>Lang</Col>
+                        <Col
+                          span={6}
+                          style={{
+                            borderLeft: '1px solid black',
+                            borderBottom: '1px solid black',
+                            borderRight: '1px solid black',
+                            background: '#F1E9DD',
+                          }}
+                        >
+                          <div style={{ padding: 15 }}>Languages</div>
+                        </Col>
+                        <Col
+                          span={18}
+                          style={{
+                            borderBottom: '1px solid black',
+                            borderRight: '1px solid black',
+                          }}
+                        >
+                          <div style={{ padding: 10 }}>
+                            <Select defaultValue='en-US' style={{ width: 250 }}>
+                              <Option value='en-US'>English</Option>
+                              <Option value='ja-JP'>Japanese</Option>
+                              <Option value='zh-CN'>Chinese</Option>
+                            </Select>
+                          </div>
+                        </Col>
                       </Row>
                     </Col>
                   </Row>
