@@ -31,6 +31,27 @@
 
 .tree-only-leaf-note-checkbox,
 .tree-independent-checkbox {
+  .ant-tree-treenode.ant-tree-treenode-leaf-last {
+    .ant-tree-icon__customize {
+      display: none;
+    }
+  }
+  .ant-tree-node-content-wrapper.ant-tree-node-content-wrapper-normal {
+    .ant-tree-icon__customize {
+      display: none;
+    }
+  }
+  .ant-tree-treenode.ant-tree-treenode-switcher-close.ant-tree-treenode-leaf-last {
+    .ant-tree-icon__customize {
+      display: inline-block;
+    }
+  }
+  .ant-tree-treenode.ant-tree-treenode-switcher-open.ant-tree-treenode-leaf-last {
+    .ant-tree-icon__customize {
+      display: inline-block;
+    }
+  }
+
   // .anticon-file {
   //   display: none;
   // }
