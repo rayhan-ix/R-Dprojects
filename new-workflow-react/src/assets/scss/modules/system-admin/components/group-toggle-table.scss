@@ -1,0 +1,12 @@
+.table-group-toggle {
+  .ant-table-tbody > tr.hidden > td {
+    background: #ececec;
+  }
+  .ant-table-tbody > tr.hidden.ant-table-row-selected > td {
+    background: #ececec;
+  }
+
+  .ant-table-tbody > tr.ant-table-row-selected > td {
+    background: none;
+  }
+}
