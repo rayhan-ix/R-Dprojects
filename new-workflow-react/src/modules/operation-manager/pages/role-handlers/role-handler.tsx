@@ -13,7 +13,7 @@ export interface RoleHandlerProps {
   /**
    * Data that need to be rendered
    */
-  data: RoleHandlerTableDataType[];
+  data?: RoleHandlerTableDataType[] | [];
 }
 
 const columns: ColumnsType<RoleHandlerTableDataType> = [
