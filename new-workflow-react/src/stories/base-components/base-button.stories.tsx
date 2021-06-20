@@ -1,6 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import { PlusOutlined, SearchOutlined } from '@ant-design/icons';
+import { SearchOutlined } from '@ant-design/icons';
+import Pencil from '@2fd/ant-design-icons/lib/Pencil';
 
 import { BaseButtonProps, BaseButton } from '../../base-components/base-button';
 
@@ -21,7 +22,7 @@ export const WithIcon = Template.bind({});
 WithIcon.args = {
   label: 'Icon Button',
   buttonType: 'button',
-  icon: <PlusOutlined />,
+  icon: <Pencil />,
 };
 
 export const IconButton = Template.bind({});
