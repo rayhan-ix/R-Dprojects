@@ -1,22 +1,16 @@
-import { createBrowserHistory } from 'history';
-import { createStore, applyMiddleware } from 'redux';
-import { routerMiddleware } from 'connected-react-router';
-import { batch, batching } from 'redux-batch-middleware';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import { logger } from 'redux-logger';
-import thunk from 'redux-thunk';
-import createRootReducer from './reducer';
-import { __dev__ } from '../utils/constants';
+import { configureStore } from '@reduxjs/toolkit';
+import userReducer from './reducers/users/user-slice';
+import systemAdminReducer from './reducers/system-admin/system-admin-slice';
+import operationMangerReducer from './reducers/operation-manager/operation-manager-slice';
 
-export const history = createBrowserHistory();
+export const store = configureStore({
+  reducer: {
+    users: userReducer,
+    systemAdmin: systemAdminReducer,
+    operationManager: operationMangerReducer,
+  },
+});
 
-const customMiddlewares = [];
-if (__dev__) {
-  customMiddlewares.push(logger);
-}
+export type RootState = ReturnType<typeof store.getState>;
 
-const middlewares = applyMiddleware(routerMiddleware(history), thunk, batch, ...customMiddlewares);
-
-const store = createStore(batching(createRootReducer(history)), composeWithDevTools(middlewares));
-
-export default store;
+export type AppDispatch = typeof store.dispatch;

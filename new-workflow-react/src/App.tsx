@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 import { Provider } from 'react-redux';
-import store from './store';
+import { store } from './store';
 import ErrorFallback from './error-boundary/errorBoundary';
 import Layout from './modules/layout';
 import FormsContainer from './modules/user/pages/forms/forms-container';
