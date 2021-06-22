@@ -1,13 +1,11 @@
-// @ts-nocheck
 import React, { useEffect, useState } from 'react';
 import { Tree } from 'antd';
 import '../../assets/scss/base-components/base-tree-view.scss';
 // import { FolderOpenTwoTone } from '@ant-design/icons';
 
 const { DirectoryTree } = Tree;
-export interface CheckedTreeOnlyLeafProps {
-  showCheckBox?: Boolean;
-}
+
+export interface CheckedTreeOnlyLeafProps {}
 
 const treeData = [
   {
@@ -76,7 +74,7 @@ const treeData = [
   },
 ];
 
-const Demo = () => {
+export const CheckedTreeOnlyLeaf = () => {
   const [expandedKeys, setExpandedKeys] = useState<React.Key[]>();
   const [checkedKeys, setCheckedKeys] = useState<React.Key[]>();
   const [selectedCheckedKeyBehind, setSelectedCheckedKeyBehind] = useState<any[]>([]);
@@ -107,7 +105,7 @@ const Demo = () => {
     }
   };
 
-  const onCheck = (checkedKeysValue: React.Key[], info: any) => {
+  const onCheck = (checkedKeysValue: any, info: any) => {
     commonForSelectOrChecked(info);
   };
 
@@ -160,5 +158,3 @@ const Demo = () => {
     />
   );
 };
-
-export const CheckedTreeOnlyLeaf = () => <Demo />;

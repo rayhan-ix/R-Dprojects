@@ -4,7 +4,9 @@ import { stripHtml } from 'string-strip-html';
 import { camelCase } from 'change-case';
 import * as _ from 'lodash';
 import React, { useEffect, useState } from 'react';
-import { Checkbox, Form as AntForm, Radio, Select, DatePicker, Input, Button } from 'antd';
+import { Checkbox, Form as AntForm, Radio, Select, Input, Button } from 'antd';
+import DatePicker from '../../../../../antd-custom-component/DatePicker';
+import { useAppSelector } from '../../../../../store/hooks/hooks';
 
 interface Props {
   formData: [];
@@ -62,6 +64,8 @@ const FormIntegrate = (props: Props) => {
   const { formData } = props;
   const [formElement, setFormElement] = useState([]);
 
+  const { dateLocale } = useAppSelector((state) => state.language);
+
   useEffect(() => {
     setFormElement(formData);
   }, [formData]);
@@ -75,7 +79,6 @@ const FormIntegrate = (props: Props) => {
         onSubmit={(values, actions) => {
           setTimeout(() => {
             alert(JSON.stringify(values, null, 2));
-            console.log(JSON.stringify(values, null, 2));
             actions.setSubmitting(false);
             actions.resetForm();
           }, 200);
@@ -162,7 +165,11 @@ const FormIntegrate = (props: Props) => {
                       form,
                     }: FieldProps) => (
                       <AntForm.Item>
-                        <DatePicker {...field} onChange={(value) => form.setFieldValue(field.name, value)} />
+                        <DatePicker
+                          locale={dateLocale}
+                          {...field}
+                          onChange={(value) => form.setFieldValue(field.name, value)}
+                        />
                       </AntForm.Item>
                     )}
                   </Field>
